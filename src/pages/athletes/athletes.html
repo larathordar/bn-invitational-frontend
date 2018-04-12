@@ -6,7 +6,7 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content>
+<ion-content padding="">
 
   <ion-refresher (ionRefresh)="doRefresh($event)">
     <ion-refresher-content></ion-refresher-content>
@@ -14,7 +14,9 @@
 
   <ng-container>
     <ion-list>
+      <ion-item>
       <h1 class="title">Skiers</h1>
+      </ion-item>
       <ion-item *ngFor="let athlete of athletes" (click)="launchAthletePage(athlete.id)">
         <ion-avatar item-start>
           <img src="{{ athlete.attributes.image }}">
